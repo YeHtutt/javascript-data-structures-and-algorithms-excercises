@@ -43,7 +43,7 @@ function highestScoringWord(str) {
     // Map the array of words to an array of scores
     const scores = words.map((word) => {
         // Reduce the word to a single score
-        Array.from(word).reduce(
+        return Array.from(word).reduce(
             (score, letter) => score + letter.charCodeAt(0) - 96,
             0
         )
